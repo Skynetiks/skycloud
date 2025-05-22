@@ -26,6 +26,9 @@ COPY tsconfig.json ./tsconfig.json
 COPY mimes.json ./mimes.json
 COPY code.json ./code.json
 
+# ⚠️ Add this before building Next
+RUN pnpm build:prisma
+
 ENV NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production
 
