@@ -17,7 +17,8 @@ services:
       retries: 5
 
   skycloud:
-    image: ghcr.io/diced/skycloud:latest
+    build:
+      context: .
     restart: unless-stopped
     ports:
       - '3000:3000'
