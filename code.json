@@ -1,0 +1,212 @@
+[
+  {
+    "ext": "html",
+    "mime": "text/x-skycloud-html",
+    "name": "HTML"
+  },
+  {
+    "ext": "css",
+    "mime": "text/x-skycloud-css",
+    "name": "CSS"
+  },
+  {
+    "ext": "cpp",
+    "mime": "text/x-skycloud-c++src",
+    "name": "C++"
+  },
+  {
+    "ext": "js",
+    "mime": "text/x-skycloud-javascript",
+    "name": "JavaScript"
+  },
+  {
+    "ext": "py",
+    "mime": "text/x-skycloud-python",
+    "name": "Python"
+  },
+  {
+    "ext": "rb",
+    "mime": "text/x-skycloud-ruby",
+    "name": "Ruby"
+  },
+  {
+    "ext": "java",
+    "mime": "text/x-skycloud-java",
+    "name": "Java"
+  },
+  {
+    "ext": "md",
+    "mime": "text/x-skycloud-markdown",
+    "name": "Markdown"
+  },
+  {
+    "ext": "c",
+    "mime": "text/x-skycloud-csrc",
+    "name": "C"
+  },
+  {
+    "ext": "php",
+    "mime": "text/x-skycloud-httpd-php",
+    "name": "PHP"
+  },
+  {
+    "ext": "sass",
+    "mime": "text/x-skycloud-sass",
+    "name": "Sass"
+  },
+  {
+    "ext": "scss",
+    "mime": "text/x-skycloud-scss",
+    "name": "SCSS"
+  },
+  {
+    "ext": "swift",
+    "mime": "text/x-skycloud-swift",
+    "name": "Swift"
+  },
+  {
+    "ext": "ts",
+    "mime": "text/x-skycloud-typescript",
+    "name": "TypeScript"
+  },
+  {
+    "ext": "go",
+    "mime": "text/x-skycloud-go",
+    "name": "Go"
+  },
+  {
+    "ext": "rs",
+    "mime": "text/x-skycloud-rustsrc",
+    "name": "Rust"
+  },
+  {
+    "ext": "sh",
+    "mime": "text/x-skycloud-sh",
+    "name": "Bash"
+  },
+  {
+    "ext": "json",
+    "mime": "text/x-skycloud-json",
+    "name": "JSON"
+  },
+  {
+    "ext": "ps1",
+    "mime": "text/x-skycloud-powershell",
+    "name": "PowerShell"
+  },
+  {
+    "ext": "sql",
+    "mime": "text/x-skycloud-sql",
+    "name": "SQL"
+  },
+  {
+    "ext": "yaml",
+    "mime": "text/x-skycloud-yaml",
+    "name": "YAML"
+  },
+  {
+    "ext": "dockerfile",
+    "mime": "text/x-skycloud-dockerfile",
+    "name": "Dockerfile"
+  },
+  {
+    "ext": "lua",
+    "mime": "text/x-skycloud-lua",
+    "name": "Lua"
+  },
+  {
+    "ext": "conf",
+    "mime": "text/x-skycloud-nginx-conf",
+    "name": "NGINX Config File"
+  },
+  {
+    "ext": "pl",
+    "mime": "text/x-skycloud-perl",
+    "name": "Perl"
+  },
+  {
+    "ext": "r",
+    "mime": "text/x-skycloud-rsrc",
+    "name": "R"
+  },
+  {
+    "ext": "scala",
+    "mime": "text/x-skycloud-scala",
+    "name": "Scala"
+  },
+  {
+    "ext": "groovy",
+    "mime": "text/x-skycloud-groovy",
+    "name": "Groovy"
+  },
+  {
+    "ext": "kt",
+    "mime": "text/x-skycloud-kotlin",
+    "name": "Kotlin"
+  },
+  {
+    "ext": "hs",
+    "mime": "text/x-skycloud-haskell",
+    "name": "Haskell"
+  },
+  {
+    "ext": "ex",
+    "mime": "text/x-skycloud-elixir",
+    "name": "Elixir"
+  },
+  {
+    "ext": "vim",
+    "mime": "text/x-skycloud-vim",
+    "name": "Vim"
+  },
+  {
+    "ext": "m",
+    "mime": "text/x-skycloud-matlab",
+    "name": "MATLAB"
+  },
+  {
+    "ext": "dart",
+    "mime": "text/x-skycloud-dart",
+    "name": "Dart"
+  },
+  {
+    "ext": "hbs",
+    "mime": "text/x-skycloud-handlebars-template",
+    "name": "Handlebars"
+  },
+  {
+    "ext": "hcl",
+    "mime": "text/x-skycloud-hcl",
+    "name": "HCL"
+  },
+  {
+    "ext": "http",
+    "mime": "text/x-skycloud-http",
+    "name": "HTTP"
+  },
+  {
+    "ext": "ini",
+    "mime": "text/x-skycloud-ini",
+    "name": "INI"
+  },
+  {
+    "ext": "jsx",
+    "mime": "text/x-skycloud-jsx",
+    "name": "JSX"
+  },
+  {
+    "ext": "coffee",
+    "mime": "text/x-skycloud-coffeescript",
+    "name": "CoffeeScript"
+  },
+  {
+    "ext": "tex",
+    "mime": "text/x-skycloud-latex",
+    "name": "LaTeX (KaTeX)"
+  },
+  {
+    "name": "Plain Text",
+    "mime": "text/x-skycloud-plain",
+    "ext": "txt"
+  }
+]

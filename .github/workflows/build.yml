@@ -1,0 +1,52 @@
+name: 'Build'
+
+on:
+  push:
+    branches: [v4, trunk]
+  pull_request:
+    branches: [v4, trunk]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        node: [20.x, 22.x, 24.x]
+        arch: [amd64, arm64]
+    runs-on: ubuntu-24.04${{ matrix.arch == 'arm64' && '-arm' || '' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use node@${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        id: pnpm-cache
+        run: |
+          echo "store_path=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.pnpm-cache.outputs.store_path }}
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-pnpm-next-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-next-store-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Install
+        run: pnpm install
+
+      - name: Build
+        env:
+          SKYCLOUD_BUILD: 'true'
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: pnpm build

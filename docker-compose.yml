@@ -1,0 +1,36 @@
+services:
+  postgresql:
+    image: postgres:16
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRESQL_USER:-skycloud}
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD:?POSTGRESSQL_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRESQL_DB:-skycloud}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', 'skycloud']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  skycloud:
+    image: ghcr.io/diced/skycloud:latest
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgres://${POSTGRESQL_USER:-skycloud}:${POSTGRESQL_PASSWORD}@postgresql:5432/${POSTGRESQL_DB:-skycloud}
+    depends_on:
+      - postgresql
+    volumes:
+      - './uploads:/skycloud/uploads'
+      - './public:/skycloud/public'
+      - './themes:/skycloud/themes'
+
+volumes:
+  pgdata:

@@ -1,0 +1,8 @@
+.github
+.next
+build
+node_modules
+uploads*
+.env
+.eslintcache
+generated
